@@ -20,7 +20,9 @@ function loadPage(elemento) {
 
     fetch(link)
         .then(res => {
-            // console.log(res);
+             if(res.status !== 200){
+                throw new Error
+            }
             return res.text()
         })
         .then(html => carregaPagina(html))
