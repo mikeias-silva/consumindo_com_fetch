@@ -20,7 +20,7 @@ function loadPage(elemento) {
 
     fetch(link)
         .then(res => {
-             if(res.status !== 200){
+            if(res.status !== 200){
                 throw new Error
             }
             return res.text()
